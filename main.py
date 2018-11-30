@@ -23,9 +23,9 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 app.config['PROPAGATE_EXCEPTIONS']=True
 app.config['JWT_BLACKLIST_ENABLED']=True
 app.config['JWT_BLACKLIST_TOKEN_CHECKS']=['access', 'refresh']
-@app.before_first_request
-def create_tables():
-	db.create_all()
+#@app.before_first_request
+#def create_tables():
+#	db.create_all()
 
 jwt = JWTManager(app)
 
